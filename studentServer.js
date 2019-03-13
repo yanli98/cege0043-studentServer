@@ -9,6 +9,14 @@ var http = require('http');
 var httpServer = http.createServer(app);
 httpServer.listen(4480);
 
+
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({
+extended: true
+}));
+app.use(bodyParser.json());
+
+
 // adding functionality to log the requests
 app.use(function (req, res, next) {
 var filename = path.basename(req.url);
