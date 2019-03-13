@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Simple Form Creation Example</title>
+</head>
+<body>
+<h1> This is a simple form</h1>Name
+
+
+<label for="name">Name</label><input type="text" size="25" id="name"/><br />
+<label for="surname">Surname</label><input type="text" size="25" id="surname"/><br />
+<label for="module">Module</label><input type="text" size="25" id="module"/><br />
+
+<p>Would you like lectures in the morning or afternoon?</p>
+Morning: <input type="radio" name="amorpm" id="morning" /><br />
+Afternoon: <input type="radio" name="amorpm" id ="afternoon"/><br />
+
+<p>Which modules are you taking?</p>
+CEGEG077: <input type="checkbox" name="modules" id = check1 value="CEGEG077"checked="yes" /><br />
+CEGEG129: <input type="checkbox" name="modules" id = check2 value="CEGEG129" /><br />
+CEGEG082: <input type="checkbox" name="modules" id = check3 value="CEGEG082" /><br />
+CEGEG034: <input type="checkbox" name="modules" id = check4 value="CEGEG034" /><br />
+
+<p>What is your first language?</p>
+<select name="languageselectbox" id="languageselectbox">
+<option >English </option>
+<option>Mandarin</option>
+<option>Greek</option>
+<option>Italian</option>
+<option>Spanish</option>
+<option>Other</option>
+</select>
+<br />
+
+<p>Specify coordinates for your submission:</p>
+<label for="latitude">Latitude: </label><input type="text" size="20" id="latitude"><br>
+<label for="latitude">Longitude: </label><input type="text" size="20" id="longitude">
+
+<button id="startUpload" onclick="startDataUpload()">Start Data Upload</button>
+<div id="dataUploadResult">The result of the upload goes here</div>
+
+<script src="uploadData.js"> </script>
+
+</body>
+</html>
